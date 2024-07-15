@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './function.scss';
+
+@layer base {
+    @font-face {
+        font-family: 'FC Iconic';
+        src: url('./assets/fonts/FCIconic-Bold.woff2') format('woff2'),
+            url('./assets/fonts/FCIconic-Bold.woff') format('woff');
+        font-weight: 900;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'FC Iconic';
+        src: url('./assets/fonts/FCIconic-Regular.woff2') format('woff2'),
+            url('./assets/fonts/FCIconic-Regular.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'FC Iconic';
+        src: url('./assets/fonts/FCIconic-Light.woff2') format('woff2'),
+            url('./assets/fonts/FCIconic-Light.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'FC Iconic';
+        src: url('./assets/fonts/FCIconic-ExtraLight.woff2') format('woff2'),
+            url('./assets/fonts/FCIconic-ExtraLight.woff') format('woff');
+        font-weight: 100;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'FC Iconic';
+        src: url('./assets/fonts/FCIconic-SemiBold.woff2') format('woff2'),
+            url('./assets/fonts/FCIconic-SemiBold.woff') format('woff');
+        font-weight: 600;
+        font-style: normal;
+    }
+    
+    html {
+        font-family: 'FC Iconic', system-ui, sans-serif;
+        font-weight: lighter;
+        font-size: calc(10px + 0.00390625%);
+        
+        @media screen and (min-width: '1024px') {
+            font-size: calc(15px + 0.00390625%);
+        }
+        @media screen and (min-width: '768px') {
+            font-size: calc(13px + 0.00390625%);
+        }
+        @media screen and (min-width: '640px') {
+            font-size: calc(12px + 0.00390625%);
+        }
+    }
+
+    :root {
+        --color-detail: 68 68 68;
+        --color-highllght-blue: 33 136 194;
+        --color-background: 242 242 242;
+        --color-background-dark: 20 20 20;
+        --color-text-white: 179 179 179;
+        --color-header: 34 46 152;
+        --project-header: 184 225 255;
+        --project-type: 200 200 200;
+        --assets-background: 212 220 229;
+        --assets-border: 220 227 234;
+    }
+
+    body{
+        transition: background-color 1s;
+    }
+    
+}
