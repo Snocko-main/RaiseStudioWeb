@@ -2,7 +2,7 @@
   <div class="home">
     <ProjectMain />
     <GameAssetsMain />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+    <FooterComp />
   </div>
 </template>
 
@@ -11,12 +11,14 @@ import { Options, Vue } from 'vue-class-component';
 import HelloWorld from '@/components/HelloWorld.vue';
 import ProjectMain from '@/components/ProjectMain.vue';
 import GameAssetsMain from '@/components/GameAssetsMain.vue';
+import FooterComp from '@/components/FooterComp.vue';
 
 @Options({
   components: {
     HelloWorld,
     ProjectMain,
     GameAssetsMain,
+    FooterComp
   },
 })
 export default class HomeView extends Vue {}

@@ -3,9 +3,13 @@
         <div class="main header text-header-blue dark:text-highllght-blue">Projects</div>
         <div class="project_group grid grid-flow-row grid-cols-1 gap-6">
             <div class="project col-span-1">
-                <div class="project_banner relative">
-                    <img src="../assets/images/project1.png" alt="">
-                    <div class="project_prop absolute"><img src="../assets/images/project1_prop.png" alt=""></div>
+                <div class="project_banner_group relative">
+                    <div class="project_banner">
+                        <img  src="../assets/images/project1.png" alt="">
+                    </div>
+                    <div class="project_prop">
+                        <img src="../assets/images/project1_prop.png" alt="">
+                    </div>
                 </div>
                 <div class="project_info flex flex-col justify-evenly items-center h-full">
                     <div class="project_detail">
@@ -19,9 +23,13 @@
                 </div>
             </div>
             <div class="project col-span-1">
-                <div class="project_banner relative">
-                    <img src="../assets/images/project2.png" alt="">
-                    <div class="project_prop absolute"><img src="../assets/images/project2_prop.png" alt=""></div>
+                <div class="project_banner_group relative">
+                    <div class="project_banner">
+                        <img  src="../assets/images/project2.png" alt="">
+                    </div>
+                    <div class="project_prop">
+                        <img src="../assets/images/project2_prop.png" alt="">
+                    </div>
                 </div>
                 <div class="project_info flex flex-col justify-evenly items-center h-full">
                     <div class="project_detail">
@@ -63,26 +71,61 @@
 }
 .project{
     position: relative;
+    max-height: rem(365);
+    max-width: rem(1600);
+    overflow-x: clip;
     &_title{
         letter-spacing: rem(10);
     }
-    &_prop{
-        left: 0;
-        bottom: 0;
-        width: calc(100% - rem(419));
+    &_banner{
+        height: 100%;
+        &_group{
+        }
         img{
+            max-width: unset;
             height: 100%;
-            width: auto;
+        }
+    }
+    &_prop{
+        position: absolute;
+        left: 50%;
+        transform: translateX(-45%);
+        bottom: 0;
+        width: rem(950);
+        max-height: 100%;
+        display: flex;
+        align-items: flex-end;
+        @media screen and (min-width: '1024px') {
+            left: 0%;
+            transform: translateX(0);
+        }
+        img{
+            max-width: unset;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
         }
     }
     &_info{
         position: absolute;
-        width: rem(450);
+        max-height: rem(365);
         right: 0;
         bottom: 0;
         background-color: rgba($color: #101532, $alpha: 0.7);
         -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        width: 100%;
+        display: flex;
+        &:hover,&:active{
+            opacity: 1;
+        }
+        @media screen and (min-width: '1024px') {
+            width: rem(450);
+            opacity: 1;
+            display: none;
+        }
     }
     &_button{
         width: rem(174);

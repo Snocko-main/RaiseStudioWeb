@@ -54,7 +54,10 @@ nav {
     }
     .logo{
         img{
-            width: rem(276);
+            width: rem(156);
+            @media screen and (min-width: '1024px') {
+                width: rem(276);
+            }
         }
     }
 }

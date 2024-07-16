@@ -1,5 +1,5 @@
 <template>
-    <div class="container mx-auto pt-14">
+    <div class="container mx-auto pt-14 pb-20">
         <div class="main header text-header-blue dark:text-highllght-blue">Game Assets</div>
         <div class="game_assets_group grid grid-flow-col grid-cols-4 gap-6">
             <div class="game_assets_col col-span-1">
